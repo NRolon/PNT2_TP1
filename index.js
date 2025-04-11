@@ -6,13 +6,13 @@ const productos = [
     { id: 5, nombre: "Campera", precio: 9500, categoria: "Ropa" }  
     ]; 
 
-    // parte 1 a
+    // Acceder a propiedades individuales: 
 
     const primerNombreDelObj = productos[0].nombre
 
     console.log(primerNombreDelObj)
 
-    // parte 1b
+    // Recorrido con for...of: 
 
     const largoArray = productos.length
     console.log(largoArray)
@@ -29,10 +29,37 @@ const productos = [
         console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
     }
 
-    // parte 1 c
+    // Recorrido con .forEach(): 
 
     
     productos.forEach(producto => {
         
         console.log(`El producto: ${producto.nombre} - Tiene un Precio: $${producto.precio}`);
     });
+
+    // Obtener solo los nombres con .map(): 
+
+    const nuevoArray = productos.map(p =>
+        p.nombre
+    )
+
+    console.log("El nuevo array es: ", nuevoArray)
+
+    // Filtrar por categoría con .filter(): 
+
+    const nuevoArray2 = productos.filter( p => p.categoria === "Ropa"    )
+    
+    
+    console.log("El nuevo array filtrado es: " , nuevoArray2)
+
+    // Filtrar por precio con .filter(): 
+
+    const nuevoArray3 = productos.filter( p => p.precio > 3000)
+    
+    console.log("El nuevo array filtrado por precio es: " , nuevoArray3)
+
+    // Buscar un producto específico con .find(): 
+
+    const nuevoArray4 = productos.find( p => p.nombre === "Gorra")
+
+    console.log("El nuevo array con la busqueda de palabra Gorra es: " , nuevoArray4)
