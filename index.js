@@ -83,3 +83,25 @@ const productos = [
 
     console.log("El nuevo array es: " ,nuevoArray)
     console.log("El resultado de la existencia es: ", resultadoExistencia)
+
+    // . Ordenar con .sort(): 
+
+    productos.sort((a, b) => a.precio - b.precio);
+
+    console.log("Productos ordenados de menor a mayor precio", productos)
+
+    // Generar mensajes personalizados con .map():
+
+    const mensajesPersonalizados = productos.map(p => 
+        `El producto ${p.nombre} cuesta $${p.precio} y pertenece a la categoría ${p.categoria}.`
+      );
+
+    console.log(mensajesPersonalizados)
+
+    // Agregar productos con spread: 
+
+    const nuevoProductoAAgregar = { id: 7, nombre: "Campera", precio: 12000, categoria: "Ropa" };
+
+    const listaActualizada =  [...productos, nuevoProductoAAgregar]
+
+    console.log(listaActualizada)
