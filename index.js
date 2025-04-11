@@ -63,3 +63,23 @@ const productos = [
     const nuevoArray4 = productos.find( p => p.nombre === "Gorra")
 
     console.log("El nuevo array con la busqueda de palabra Gorra es: " , nuevoArray4)
+
+
+    // Verificar con .some():
+    
+    const resultadoBusquedaPrecio = productos.some ( p => p.precio > 10000 )
+
+    console.log("El resultado de la busqueda es: ", resultadoBusquedaPrecio)
+
+    //  Verificar con .every(): 
+
+    const resultadoVerificacion = productos.every ( p => p.precio > 1000 )
+    
+    console.log("El resultado de la verificacion es: ", resultadoVerificacion)
+
+    //  Verificar existencia con .includes():
+
+    const resultadoExistencia = nuevoArray.includes("Campera")
+
+    console.log("El nuevo array es: " ,nuevoArray)
+    console.log("El resultado de la existencia es: ", resultadoExistencia)
